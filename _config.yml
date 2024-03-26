@@ -10,8 +10,8 @@ sass:
   style: compressed
 
 collections:
-  - resumefr
-  - resumeen
+  - plants
+
 # Resume settings
 avatar:                  "true"
 name:                    "Axel Verrier"
