@@ -8,3 +8,17 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
+
+collections:
+  - resumefr
+  - resumeen
+# Resume settings
+avatar:                  "true"
+name:                    "Axel Verrier"
+
+descriptionfr:          "Etudiant en économie"
+
+contact_info_fr:        "Université de Bordeaux • axel.verrier7@gmail.com"
+display_header_contact_info:    "true"
+
+intro_fr: "<p>About gardening.</p>"
