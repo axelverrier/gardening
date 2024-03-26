@@ -1,0 +1,9 @@
+# Site settings
+title: "Gardening project"
+description: "A simple gardening project."
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
