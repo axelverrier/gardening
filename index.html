@@ -1,7 +1,58 @@
+---
+---
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+  <body>
+	
+    <div class="wrapper french">
+	<header class="page-header">
+
+        <!-- You can turn off the avatar in _config.yml by setting to false -->
+        {% if site.avatar == 'true' %}
+        <img src="images/plants.jpg" class="avatar no-print">
+        {% endif %}
+
+        <!-- Your name is defined in the _config.yml file -->
+        <h1 class="header-name">{{ site.name }}</h1>
+
+        <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
+        {% if site.display_header_contact_info == 'true' %}
+        <div class="header-contact-info">
+          <p>{{ site.contact_info_fr }}</p>
+        </div>
+        {% endif %}
+
+        <div class="title-bar no-print">
+
+          <!-- Your title is also defined in the _config.yml file -->
+          <h2 class="header-title">{{ site.descriptionfr }}</h2>
+		  
+          <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
+          {% include icon-links.html %}
+        </div>
+
+        <div class="executive-summary">
+          {{ site.intro_fr }}
+        </div>
+
+	</header>
+		
+		<section class="content-section">
+		{% assign ord = site.resumefr | sort:"order" %}
+		{% for element in ord %}
+		{% if element.show %}
+				
+			<header class="section-header">
+				<h2>{{element.title}}</h2>
+			</header>
+			<div class="resume-item">
+				<p>{{ element.content  | markdownify }}</p>
+			</div>
+		{% endif %}
+		{% endfor %}
+		</section>
+    </div>
+
+  </body>
+
 </html>
